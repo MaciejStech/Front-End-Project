@@ -1,0 +1,34 @@
+<ng-container *ngIf="weather$ | async as w">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-buttons slot="start">
+        <ion-back-button defaultHref="/" />
+      </ion-buttons>
+      <ion-title >{{ w.location.name }}, {{ w.location.country }}</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content class="ion-padding">
+    <div class="weather-overview">
+      <img [src]="w.current.condition.icon" alt="Weather icon" />
+      <h2>{{ w.current.temp_c }}°C</h2>
+      <p>{{ w.current.condition.text }}</p>
+    </div>
+
+    <ion-grid>
+      <ion-row>
+        <ion-col size="6" class="stat">
+          <ion-icon name="thermometer-outline"></ion-icon>
+          <div>🌡️ {{ w.current.temp_c }}°C</div>
+          <small>Temperature</small>
+        </ion-col>
+
+        <ion-col size="6" class="stat">
+          <ion-icon name="speedometer-outline"></ion-icon>
+          <div>💨 {{ (w.current.gust_mph * 1.60934) | number:'1.0-0' }} kph</div>
+          <small>Wind</small>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+  </ion-content>
+</ng-container>

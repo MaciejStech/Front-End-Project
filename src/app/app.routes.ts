@@ -10,4 +10,8 @@ export const routes: Routes = [
     redirectTo: 'home',
     pathMatch: 'full',
   },
+  {
+    path: 'forecast',
+    loadComponent: () => import('./forecast/forecast.page').then( m => m.ForecastPage)
+  },
 ];

@@ -1,0 +1,41 @@
+.weather-overview {
+    text-align: center;
+    margin: 2rem 0;
+  
+    img { width: 100px; height: 100px; }
+    h2 {
+      margin: 0.5rem 0;
+      font-size: 2.5rem;
+      color: var(--ion-color-primary);
+    }
+    p {
+      margin: 0;
+      font-size: 1.1rem;
+      color: var(--ion-color-medium);
+    }
+  }
+  
+  .stat {
+    text-align: center;
+  
+    ion-icon {
+      font-size: 2rem;
+      color: var(--ion-color-secondary);
+    }
+  
+    div {
+      margin-top: 0.5rem;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+  
+    small {
+      display: block;
+      margin-top: 0.2rem;
+      font-size: 0.8rem;
+      color: var(--ion-color-medium);
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+  }
+  
